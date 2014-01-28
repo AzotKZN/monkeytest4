@@ -2,7 +2,7 @@
 <project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
   <target name="mySuite">
     <monkeytalk:run agent="AndroidEmulator"
-      adb="/path/to/android-sdk-macosx/platform-tools/adb"
+      adb="/usr/share/android-sdk-linux/platform-tools/adb"
       script="${basedir}/sc1.mt"
       reportdir="${basedir}/reports"
       thinktime="1"
