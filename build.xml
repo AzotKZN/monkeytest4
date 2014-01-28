@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
+  <target name="mySuite">
+    <monkeytalk:run agent="AndroidEmulator"
+      adb="/path/to/android-sdk-macosx/platform-tools/adb"
+      script="${basedir}/sc1.mt"
+      reportdir="${basedir}/reports"
+      thinktime="1"
+      timeout="5000"
+      verbose="true" />
+  </target>
+</project>
