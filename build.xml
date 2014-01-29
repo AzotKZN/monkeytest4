@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
   <target name="mySuite">
+    android update project --path
     <monkeytalk:run agent="AndroidEmulator"
       adb="/usr/share/android-sdk-linux/platform-tools/adb"
       script="${basedir}/sc1.mt"
