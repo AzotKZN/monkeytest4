@@ -1535,6 +1535,17 @@
         <echo>              device. Also uninstall tested package if applicable</echo>
         <echo>              unless 'nodeps' is used as well.</echo>
     </target>
+	<target name="run">
+    <exec executable="adb">
+        <arg value="shell"/>
+        <arg value="am"/>
+        <arg value="start"/>
+        <arg value="-a"/>
+        <arg value="android.intent.action.MAIN"/>
+        <arg value="-n"/>
+        <arg value="{package.name}/{activity}"/>
+    </exec>
+</target>
 	<target name="mySuite">
      <monkeytalk:run agent="AndroidEmulator"
       adb="/usr/share/android-sdk-linux/platform-tools/adb"
