@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
+  <target name="Compile">
+     android update project --path
+  </target>
+</project>
