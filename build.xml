@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
+  <target name="Compile">
+     android update project --path
+  </target>
   <target name="mySuite">
      <monkeytalk:run agent="AndroidEmulator"
       adb="/usr/share/android-sdk-linux/platform-tools/adb"
