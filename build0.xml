@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
+    <import file="build.xml"/>
+
     <target name="run">
         <exec executable="/usr/share/android-sdk-linux/platform-tools/adb">
             <arg value="shell"/>
