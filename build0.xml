@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MyTests" xmlns:monkeytalk="antlib:com.gorillalogic.monkeytalk.ant">
-  <target name="Compile">
-     android update project --path
-  </target>
+    <target name="run">
+        <exec executable="/usr/share/android-sdk-linux/platform-tools/adb">
+            <arg value="shell"/>
+            <arg value="am"/>
+            <arg value="start"/>
+            <arg value="-a"/>
+            <arg value="android.intent.action.MAIN"/>
+            <arg value="-n"/>
+            <arg value="com.example.monkeytest4/com.example.monkeytest4.MainActivity"/>
+        </exec>
+    </target>
+    <target name="mysuite">
+        <monkeytalk:run agent="AndroidEmulator"
+                        adb="/usr/share/android-sdk-linux/platform-tools/adb"
+                        script="${basedir}/sc1.mt"
+                        reportdir="${basedir}/reports"
+                        thinktime="1"
+                        timeout="5000"
+                        verbose="true" />
+    </target>
 </project>
