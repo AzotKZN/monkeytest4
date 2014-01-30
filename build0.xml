@@ -14,7 +14,7 @@
     <target name="mysuite">
         <monkeytalk:run agent="AndroidEmulator"
                         adb="/usr/share/android-sdk-linux/platform-tools/adb"
-                        script="${basedir}/sc1.js"
+                        script="${basedir}/sc1.mt"
                         reportdir="${basedir}/reports"
                         thinktime="1"
                         timeout="5000"
