@@ -13,8 +13,8 @@
     </target>
     <target name="mysuite">
         <monkeytalk:run agent="Android"
-                        adb="/usr/share/android-sdk-linux/platform-tools/adb"
                         script="${basedir}/sc1.mt"
+						host="192.168.1.128"
                         reportdir="${basedir}/reports"
                         thinktime="1"
                         timeout="5000"
