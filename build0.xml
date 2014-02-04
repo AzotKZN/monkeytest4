@@ -13,7 +13,7 @@
     </target>
     <target name="mysuite">
         <monkeytalk:run agent="Android"
-						host="192.168.1.128"
+						host="192.168.1.109"
 						port="16862"
                         script="${basedir}/sc1.mt"
 						reportdir="${basedir}/reports"
