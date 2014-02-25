@@ -3,6 +3,7 @@ package com.example.monkeytest4;
 import java.util.Random;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,7 +21,7 @@ public class MainActivity extends Activity {
 	 public void onCreate(Bundle savedInstanceState) {
 	 super.onCreate(savedInstanceState);
 	 setContentView(R.layout.activity_main);
-	 
+	 startActivity(new Intent(this, MapTest.class));
 	 // найдем View-элементы
 	 tvOut = (TextView) findViewById(R.id.tvOut);
 	 btnOk = (Button) findViewById(R.id.btnOk); 
