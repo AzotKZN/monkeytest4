@@ -29,7 +29,7 @@ android {
     }
     dependencies {
         compile fileTree(dir: 'libs', include: '*.jar')
-        compile project(':libs:google_play_services')
+        compile project(':libs:google_play_services_lib')
     }
 
 
