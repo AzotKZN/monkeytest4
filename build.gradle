@@ -5,5 +5,32 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.5.+'
+		
     }
+}
+
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 18
+    buildToolsVersion "19.0.1"
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 18
+    }
+    sourceSets {
+        main {
+            manifest.srcFile file('AndroidManifest.xml')
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+    dependencies {
+        compile fileTree(dir: 'libs', include: '*.jar')
+        compile project(':libs:google_play_services')
+    }
+
+
 }
